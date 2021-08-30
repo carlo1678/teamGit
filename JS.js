@@ -1,0 +1,2 @@
+let nasa = "https://api.nasa.gov/planetary/apod?api_key=O81ygYCev3rWCrLjcsVVDjfwZyZLiuUSoBpj9rwv";
+let weather = "api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=b06441656303fc39a78c76c6a895875b"
