@@ -1,0 +1,30 @@
+img {
+  display: flex;
+  margin: auto;
+  height: 400px;
+  width: 400px;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.tempButton {
+  display: flex;
+  margin: auto;
+}
