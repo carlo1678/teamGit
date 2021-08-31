@@ -10,6 +10,7 @@ const FunctionalPiece = () => {
       const json = await response.json();
       const img = document.createElement("img");
       const body = document.querySelector("body");
+      console.log(json);
       img.src = json.url;
       body.append(img);
     };
