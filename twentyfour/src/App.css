@@ -23,3 +23,8 @@ h1 {
   display: flex;
   justify-content: center;
 }
+
+.tempButton {
+  display: flex;
+  margin: auto;
+}

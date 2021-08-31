@@ -21,6 +21,7 @@ const FunctionalPiece = () => {
       const json = await response.json();
       const p = document.createElement("p");
       const body = document.querySelector("body");
+      p.className = "fahrenheit";
       p.innerHTML = json.main.temp;
       body.append(p);
     };
@@ -30,9 +31,7 @@ const FunctionalPiece = () => {
     const ticketMaster = async () => {
       const response = await fetch(ticketApi);
       const json = await response.json();
-      console.log(json._embedded.venues);
       json._embedded.venues.forEach((element) => {
-        console.log(element.name);
         let body = document.querySelector("body");
         let ul = document.createElement("ul");
         let listItems = document.createElement("li");
@@ -49,10 +48,25 @@ const FunctionalPiece = () => {
   }
   const location = navigator.geolocation.getCurrentPosition(success);
 
+  const weatherApi2 = `https://api.openweathermap.org/data/2.5/weather?lat=27.95&lon=82.45&appid=9afc6a761613d9a2b34a1a0a096265f9&units=metric`;
+
+  const tempChange = async () => {
+    const response = await fetch(weatherApi2);
+    const json = await response.json();
+    const p = document.createElement("p");
+    const body = document.querySelector("body");
+    console.log(json.main.temp);
+    p.innerHTML = json.main.temp;
+    body.append(p);
+  };
+
   return (
     <div>
       <h1>24 Hour Project!</h1>
       <p className="temp">Temperature: </p>
+      <button className="tempButton" onClick={tempChange}>
+        Click Me!
+      </button>
     </div>
   );
 };
